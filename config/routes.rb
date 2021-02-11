@@ -2,5 +2,7 @@
 
 Rails.application.routes.draw do
   get "about", to: "about#index"
+  get "sign_up", to: "users#new"
+  post "sign_up", to: "users#create"
   root to: "main#index"
 end
