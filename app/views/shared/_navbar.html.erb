@@ -15,6 +15,11 @@
         </li>
         <% unless @user %>
           <li class="nav-item">
+            <%= link_to "Sign in", sign_in_path, class: "nav-link" %>
+          </li>
+        <% end %>
+        <% unless @user %>
+          <li class="nav-item">
             <%= link_to "Sign up", sign_up_path, class: "nav-link" %>
           </li>
         <% end %>
