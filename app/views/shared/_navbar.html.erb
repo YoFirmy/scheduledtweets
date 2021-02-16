@@ -13,9 +13,16 @@
           <%= link_to "About", about_path, class: "nav-link" %>
         </li>
         </li>
-        <li class="nav-item">
-          <%= link_to "Sign up", sign_up_path, class: "nav-link" %>
-        </li>
+        <% unless @user %>
+          <li class="nav-item">
+            <%= link_to "Sign up", sign_up_path, class: "nav-link" %>
+          </li>
+        <% end %>
+        <% if @user %>
+          <li class="nav-item">
+            <%= link_to "logout", logout_path, method: :delete, class: "nav-link" %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
