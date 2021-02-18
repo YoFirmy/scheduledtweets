@@ -25,6 +25,11 @@
         <% end %>
         <% if Current.user %>
           <li class="nav-item">
+            <%= link_to "Edit password", edit_password_path, class: "nav-link" %>
+          </li>
+        <% end %>
+        <% if Current.user %>
+          <li class="nav-item">
             <%= link_to "logout", logout_path, method: :delete, class: "nav-link" %>
           </li>
         <% end %>
