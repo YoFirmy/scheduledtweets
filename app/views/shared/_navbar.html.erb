@@ -17,18 +17,17 @@
           <li class="nav-item">
             <%= link_to "Sign in", sign_in_path, class: "nav-link" %>
           </li>
-        <% end %>
-        <% unless Current.user %>
           <li class="nav-item">
             <%= link_to "Sign up", sign_up_path, class: "nav-link" %>
           </li>
         <% end %>
         <% if Current.user %>
           <li class="nav-item">
+            <%= link_to "Twitter Accounts", twitter_accounts_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
             <%= link_to "Edit password", edit_password_path, class: "nav-link" %>
           </li>
-        <% end %>
-        <% if Current.user %>
           <li class="nav-item">
             <%= link_to "logout", logout_path, method: :delete, class: "nav-link" %>
           </li>
